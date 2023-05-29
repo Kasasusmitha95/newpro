@@ -1,0 +1,34 @@
+<div *ngIf="mobiles" class="container mob-table">
+  <div class="headers">
+    <h2 class="table-title">Manage Mobiles</h2>
+    <button class="btn add">Add Mobile</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>userId</th>
+        <th>Id</th>
+        <th>title</th>
+        <th>completed</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let mobile of mobiles">
+        <td>{{mobile['userId']}}</td>
+        <td>{{mobile['Id']}}</td>
+        <td>{{mobile['title']}}</td>
+        <td>{{mobile['completed']}}</td>
+      </tr>
+      <td>
+        <button class="btn btn-primary">Edit</button>
+      </td>
+      <td>
+        <button class="btn btn-danger">Delete</button>
+      </td>
+
+    </tbody>
+  </table>
+
+</div>
